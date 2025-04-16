@@ -12,11 +12,11 @@ public class Movie{
 
     //instance variables
     
-    protected String title;
-    protected int duration;   //this is length of movie in minutes
+    private String title;
+    private int duration;   //this is length of movie in minutes
     private String description;
-    protected String releaseDate;
-    protected int rating;
+    private String releaseDate;
+    private int rating;
     ArrayList<String>genres;
     ArrayList<String>languages;
     ArrayList<Crew>crew;
