@@ -16,6 +16,7 @@ public class Movie{
     protected int duration;   //this is length of movie in minutes
     private String description;
     protected String releaseDate;
+    protected int rating;
     ArrayList<String>genres;
     ArrayList<String>languages;
     ArrayList<Crew>crew;
@@ -24,13 +25,14 @@ public class Movie{
     /**
      * Constructor for objects of class Movie
      */
-    public Movie(ArrayList<Cast> cast, ArrayList<Crew> crew, ArrayList<String> genres, ArrayList<String> languages, String title,String releaseDate, String description, int duration){
+    public Movie(String title,String releaseDate, String description, int duration,int rating){
 
         // initialise instance variables
         this.title = title;
         this.releaseDate=releaseDate;
         this.description=description;
         this.duration = duration;
+        this.rating=rating;
         cast = new ArrayList<Cast>();
         crew = new ArrayList<Crew>();
         genres = new ArrayList<String>();
@@ -67,6 +69,13 @@ public void setDescription(String description){
 public String getDescription(){
     return this.description;
 }
+    public void setRating(int rating){
+        this.rating=rating;
+        
+    }
+    public int getRating(){
+        return this.rating;
+    }
  
 public ArrayList<String> getLanguages()
 {
@@ -87,15 +96,18 @@ public void movieDetails(){
     System.out.println("Stars of the movie " + title + ": ");
 
    //iterate through the whole array of actrors and print them
-    int i = 0;
-    for(i = 0; i < cast.size(); i++)
-    {
-        Cast currentStar = cast.get(i);
-        System.out.print(currentStar.getName()+",");
+    
+    for(Cast currentStar:cast){
+        System.out.print("Cast: "+currentStar.getName()+",");
     }
     
-   //genre of movie
-    System.out.println("Genre of movie: ");
+   //genres of movie
+for(String s:genres){
+    System.out.print("Genre: "+ s +",");
+    
+}
+    
+    
     
     //print out each and every crew involved in the movie, e.g Director, producer
     System.out.println("Crew :");
