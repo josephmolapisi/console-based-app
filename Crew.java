@@ -17,12 +17,14 @@ public class Crew{
         this.name = name;
         this.role = role;
     }
-    
+
+    // getter for crew member name 
     public String getName()
     {
         return name;
     }
-    
+
+    // getter for crew member role 
     public String getRole()
     {
         return role;
