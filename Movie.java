@@ -40,39 +40,56 @@ public class Movie{
         
     }
 
+    // setter for movie title 
 public void setTitle(String title){
     this.title=title;
 
 }
+    // getter for movie title
 public String getTitle()
 {
     return title;
 }
+    // Setter for duration 
 public void setDuration(int duration){
     this.duration=duration;
 
 }
+
+// Getter for duration
 public int getDuration(){
     return this.duration;
 }
+
+    // Setter for realese date 
 public void setReleaseDate(String releaseDate){
     this.releaseDate=releaseDate;
 
 }
+
+    // getter for release date
 public String getReleaseDate(){
     return this.releaseDate;
 }
+
+    // setter for description
 public void setDescription(String description){
     this.description=description;
 
 }
+
+    // getter for description
 public String getDescription(){
     return this.description;
 }
+
+    // setter for rating
     public void setRating(int rating){
         this.rating=rating;
         
     }
+
+    // getter for rating
     public int getRating(){
         return this.rating;
     }
@@ -117,7 +134,8 @@ for(String s:genres){
         System.out.println(currentCrewMember.getName()+",");
        
     }
-    
+
+    // output the rating for the movie 
     System.out.println("Rating: ");
     
 
