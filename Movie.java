@@ -1,6 +1,6 @@
 /**
  * Filename:Movie.java
- * Description:
+ * Description: A domain class containing all attributes of a movie
  * How to compile:javac Movie.java
  * How to run: java Movie
  * 
@@ -93,7 +93,7 @@ public String getDescription(){
     public int getRating(){
         return this.rating;
     }
- 
+ //return the list of languages of the movie
 public ArrayList<String> getLanguages()
 {
     return languages;
@@ -103,6 +103,13 @@ public void addLanguage(String language)
 {
     this.languages.add(language);
 }
+public void addGenre(String genre){
+    genres.add(genre);
+}
+//return the genres of the movie
+public ArrayList<String> getGenres(){
+    return genres;
+}
  /**
      * this methods displays the Movie information
      */
@@ -110,7 +117,7 @@ public void movieDetails(){
     System.out.println("Title of movie" + title);
     System.out.println("Movie description: " + description);
     System.out.println(duration+" Minutes");
-    System.out.println("Stars of the movie " + title + ": ");
+    System.out.println("Released: "+releaseDate);
 
    //iterate through the whole array of actrors and print them
     
@@ -119,24 +126,24 @@ public void movieDetails(){
     }
     
    //genres of movie
-for(String s:genres){
-    System.out.print("Genre: "+ s +",");
+   System.out.println("Genres: ");
+    for(String s:genres){
+    System.out.print(s +",");
     
-}
+   }
     
-    
-    
-    //print out each and every crew involved in the movie, e.g Director, producer
-    System.out.println("Crew :");
-    
-    {
-       
-        
-       
-    }
+     //print out each and every crew involved in the movie, e.g Director, producer
+    System.out.println("Directors :");
 
+    for(Crew staff:crew){
+        if(staff.getRole().equalsIgnoreCase("director")){
+            System.out.print(staff.getName()+",");
+
+        }
+
+    }
     // output the rating for the movie 
-    System.out.println("Rating: ");
+    System.out.println("Rating: "+ rating);
     
 
 
