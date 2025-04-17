@@ -128,10 +128,10 @@ for(String s:genres){
     
     //print out each and every crew involved in the movie, e.g Director, producer
     System.out.println("Crew :");
-    for(i = 0; i < crew.size(); i++)
+    
     {
-        Crew currentCrewMember = crew.get(i);
-        System.out.println(currentCrewMember.getName()+",");
+       
+        
        
     }
 
