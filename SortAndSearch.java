@@ -42,7 +42,35 @@ public class SortAndSearch{
                 movies.set(i, movies.get(minIndex));
                 movies.set(minIndex, temp);
             }
-    
+    public Movie linearSearch(ArrayList<Movie>movies, String title){
+
+        for (Movie movie : movies) {
+            if (movie.getTitle().equalsIgnoreCase(title)) {
+
+                // Found the movie, return it
+                return movie; 
+            }
+        }
+        return null; // If not found, return null
+    }
+
+    public Movie binarySearch(ArrayList<Movie>movies, int rating,int left,int right){
+        if(left>right){
+            return null;
+
+        }
+        int mid=(left+right)/2;
+
+        Movie midMovie = movies.get(mid);
+        if (midMovie.getRating() == rating) {
+            return midMovie; // Found the movie
+             } 
+    else if (midMovie.getRating() < rating) {
+        return binarySearch(movies, rating, mid + 1, right); // Search right half
+    } 
+    else {
+        return binarySearch(movies, rating, left, mid - 1); // Search left half
+    }
 
 }
 }
