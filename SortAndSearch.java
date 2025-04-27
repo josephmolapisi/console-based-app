@@ -42,6 +42,11 @@ public class SortAndSearch{
                 movies.set(i, movies.get(minIndex));
                 movies.set(minIndex, temp);
             }
+    
+    
+
+
+    }
     public Movie linearSearch(ArrayList<Movie>movies, String title){
 
         for (Movie movie : movies) {
@@ -72,5 +77,7 @@ public class SortAndSearch{
         return binarySearch(movies, rating, left, mid - 1); // Search left half
     }
 
-}
+
+        
+    }
 }
