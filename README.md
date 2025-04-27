@@ -13,3 +13,23 @@ Since we already created our custom exceptions, the class will implement them an
 
 We have created a class HorrorMovie that extends movie, this is a way of showing how inheritance can be shown.
 
+
+
+
+As week 2 of our Assignment comes to end, this is what we were able to achieve. We created an interface with our methods that throw relevant exceptions.
+i.The addMovie (Movie movie)method throws a DuplicateMovieException each time you enter a movie with a name that already exists.
+ii. searchMovie(String title) takes a title of the movie as parameter and compares the name to each of the movies available and throws a MovieNotFoundException if there does not exist a movie with a name that matches the title.
+iii. displayMovies() is a void method that prints a movie and the year it was released.
+iv. deleteMovie(Movie movie)  method makes use  of the search method and throws MovieNotFoundException whenever a movie does not exist in the list.
+
+We then created a class called MovieUtility.java that implements the interface .
+
+We finally created a SortAndSearch class  that sorts movies by rating, from highest rated to lowest rated. It also sorts movies by name but this is a feature only available to admin since we were tasked to sort with numericals.
+
+A linearSearch and binarySearch methods were created to return a movie, given some conditions. In the coming week we will see how each of these come together in the main method and see how it will interact with the user
+
+
+
+
+
+
