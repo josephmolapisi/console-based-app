@@ -85,9 +85,16 @@ public void deleteMovie(String title)throws MovieNotFoundException{
 
     // this method lists all movies
     public void displayMovies() {
+
+        if(movies.isEmpty()){
+            System.out.println("Watchlist is empty.!!!");
+
+        }
+        else{
         System.out.println("====MY WATCHLIST====");
         for (Movie movie : movies) {
             System.out.println(movie.getTitle() + " (" + movie.getReleaseDate() + ")");
+        }
         }
     }
 
