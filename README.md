@@ -26,7 +26,21 @@ We then created a class called MovieUtility.java that implements the interface .
 
 We finally created a SortAndSearch class  that sorts movies by rating, from highest rated to lowest rated. It also sorts movies by name but this is a feature only available to admin since we were tasked to sort with numericals.
 
-A linearSearch and binarySearch methods were created to return a movie, given some conditions. In the coming week we will see how each of these come together in the main method and see how it will interact with the user
+A linearSearch and binarySearch methods were created to return a movie, given some conditions. In the coming week we will see how each of these come together in the main method and see how it will interact with the user.
+
+
+
+Week 3
+Overview
+
+The MovieApp class serves as the core of a movie database simulation, allowing users to add, search, update, delete, sort, and view movies. It features an interactive menu-driven console application where users make selections based on numbered options.
+Additionally, if the program is launched with the "admin" argument, Admin Mode is enabled, unlocking extra functionality.
+
+
+The MovieApp class is designed to simulate a movie database, allowing users to interact with the system through a console-based menu. At the start of execution, the program checks if an admin argument has been provided, enabling a special mode with additional functionality. It then initializes various objects, including a list to store movies and utility classes for handling operations such as adding, updating, searching, and sorting movies. A Scanner object is used to gather user input throughout the program. The main menu is displayed within a do-while loop, prompting users to select an option. Depending on the choice entered, the program either adds a movie to the watchlist, searches for a movie by title, updates movie details, deletes a movie, sorts the movie list, or displays all available movies. If the user is in admin mode, an extra feature for displaying detailed movie information is provided. The process of adding a movie includes collecting several attributes such as title, release date, description, duration, rating, genres, languages, crew members, and actors. Each input is carefully handled to avoid skipping issues, with proper use of nextLine() after numerical inputs to consume leftover newline characters. 
+
+
+The program also incorporates exception handling to manage errors gracefully, catching cases such as missing movies, duplicate entries, or invalid ratings. The loop continues to execute until the user selects the exit option, ensuring all resources are closed properly before termination. This design allows for seamless interaction, efficient data management, and a structured approach to handling movie-related operations in a simulated database environment.
 
 
 
